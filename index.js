@@ -2,6 +2,7 @@ const fs = require('fs/promises');
 const prompts = require('prompts');
 const { getLicense, findLicense } = require('license');
 const path = require('path');
+const covgen = require('covgen');
 
 (async () => {
   const answers = await prompts([
@@ -52,10 +53,7 @@ const path = require('path');
   }
 
   if (answers.generateCodeOfConduct) {
-    await fs.copyFile(
-      path.join(__dirname, 'resources', 'CODE_OF_CONDUCT.md'),
-      path.join(process.cwd(), 'CODE_OF_CONDUCT.md'),
-    );
+    await covgen('developers@nanogiants.de', path.join(process.cwd(), 'CODE_OF_CONDUCT.md'));
   }
 
   console.log('All files have been created');
