@@ -4,6 +4,9 @@
   "description": "Sets up new NanoGiants repositories including LICENSE, CoC and contribution guidelines",
   "main": "index.js",
   "scripts": {},
+  "bin": {
+    "ng-repo-setup": "./index.js"
+  },
   "keywords": [
     "nanogiants",
     "repository",
