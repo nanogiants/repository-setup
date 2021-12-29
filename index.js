@@ -104,6 +104,24 @@ const FILE_MAPPING = {
     repoUrl = packageAnswers.repoUrl;
     docsUrl = packageAnswers.docsUrl;
 
+    const emailSensitiveBugs =
+      !answers.Contributing ||
+      (await prompts({
+        type: 'text',
+        name: 'emailSensitiveBugs',
+        message: 'CONTRIBUTING.md: E-mail address for sensitive bugs',
+        initial: 'developers@nanogiants.de',
+      }));
+
+    const enforcementEmail =
+      !answers.CodeOfConduct ||
+      (await prompts({
+        type: 'text',
+        name: 'enforcementEmail',
+        message: 'CODE_OF_CONDUCT.md: E-mail address for enforcement',
+        initial: 'developers@nanogiants.de',
+      }));
+
     const specs = {
       project: {
         name,
@@ -113,11 +131,11 @@ const FILE_MAPPING = {
       },
       contributing: {
         generate: answers.generateContributing,
-        emailSensitiveBugs: 'developers@nanogiants.de',
+        emailSensitiveBugs,
       },
       codeOfConduct: {
         generate: answers.generateCodeOfConduct,
-        enforcementEmail: 'developers@nanogiants.de',
+        enforcementEmail,
         enforcementGuidelines: true,
       },
     };
