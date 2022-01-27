@@ -4,6 +4,8 @@ This project helps setting up the necessary Open Source related markdown files a
 
 ## Setup
 
+### Installation
+
 ```bash
 $ npm install -g @nanogiants/repository-setup
 ```
@@ -14,7 +16,15 @@ Then run:
 $ ng-repo-setup
 ```
 
-and answer the questions in your console. After the required files have been generated, you may edit the TODO comments in the generated Code of Conduct and Contributing files.
+### Without installation
+
+Just run this module with npx:
+
+```bash
+npx --package=@nanogiants/repository-setup ng-repo-setup
+```
+
+Then answer the questions in your console. After the required files have been generated, you may edit the TODO comments in the generated Code of Conduct and Contributing files.
 
 ## Templates
 

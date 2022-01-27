@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Sets up new NanoGiants repositories including LICENSE, CoC and contribution guidelines",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "index.js"
+  },
   "bin": {
-    "ng-repo-setup": "./index.js"
+    "ng-repo-setup": "index.js"
   },
   "keywords": [
     "nanogiants",
@@ -20,7 +22,7 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1"
   },
   "prettier": {
     "useTabs": false,
