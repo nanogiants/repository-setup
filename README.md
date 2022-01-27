@@ -7,13 +7,13 @@ This project helps setting up the necessary Open Source related markdown files a
 ### Installation
 
 ```bash
-$ npm install -g @nanogiants/repository-setup
+npm install -g @nanogiants/repository-setup
 ```
 
 Then run:
 
 ```bash
-$ ng-repo-setup
+ng-repo-setup
 ```
 
 ### Without installation
