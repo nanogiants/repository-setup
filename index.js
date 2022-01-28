@@ -101,8 +101,8 @@ const FILE_MAPPING = {
 
     name = packageAnswers.name;
     slug = packageAnswers.slug;
-    repoUrl = packageAnswers.repoUrl.endsWith('.git')
-      ? packageAnswers.repoUrl.substring(0, '.git'.length)
+    repoUrl = packageAnswers.repoUrl.endsWith('.git/')
+      ? packageAnswers.repoUrl.substring(0, '.git/'.length)
       : packageAnswers.repoUrl;
     docsUrl = packageAnswers.docsUrl;
 
