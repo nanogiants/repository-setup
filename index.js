@@ -63,11 +63,7 @@ const FILE_MAPPING = {
       name = packageSlug;
       slug = packageSlug;
       docsUrl = packageHomepage;
-
-      const repositoryUrl = packageRepository?.url;
-      if (repositoryUrl) {
-        repoUrl = repositoryUrl.endsWith('/') ? repositoryUrl : `${repositoryUrl}/`;
-      }
+      repoUrl = packageRepository?.url;
     } else {
       console.log('package.json does not exist');
     }
@@ -101,8 +97,8 @@ const FILE_MAPPING = {
 
     name = packageAnswers.name;
     slug = packageAnswers.slug;
-    repoUrl = packageAnswers.repoUrl.endsWith('.git/')
-      ? packageAnswers.repoUrl.substring(0, '.git/'.length)
+    repoUrl = packageAnswers.repoUrl.endsWith('.git')
+      ? packageAnswers.repoUrl.substring(0, '.git'.length)
       : packageAnswers.repoUrl;
     docsUrl = packageAnswers.docsUrl;
 
