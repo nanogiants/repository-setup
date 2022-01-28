@@ -1,6 +1,6 @@
 {
   "name": "@nanogiants/repository-setup",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sets up new NanoGiants repositories including LICENSE, CoC and contribution guidelines",
   "main": "index.js",
   "scripts": {
